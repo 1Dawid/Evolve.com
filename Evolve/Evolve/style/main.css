@@ -1,0 +1,257 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:wght@400;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+:root {
+  --swiper-navigation-size: 100px!important;
+}
+
+body {
+  background: #F7F8FF;
+}
+
+a, li {
+  text-decoration: none !important;
+}
+
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background: #111934;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  opacity: 1;
+  visibility: visible;
+}
+.preloader .loader {
+  left: 50%;
+  top: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.preloader.done {
+  opacity: 0;
+  visibility: hidden;
+}
+
+header {
+  font-weight: 800;
+  font-size: 18px;
+  position: absolute;
+  width: 100%;
+  padding-left: 3%;
+  padding-top: 2%;
+  z-index: 100;
+}
+header .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .navigation .nav-li {
+  margin-right: 4rem;
+}
+header .navigation .nav-a-li {
+  color: #fff !important;
+}
+header .navigation .nav-a-li:after {
+  display: block;
+  left: 0;
+  /*изменить на right:0;, чтобы изменить направление подчёркивания */
+  width: 0;
+  /*задаём длинну линии до наведения курсора*/
+  height: 2px;
+  /*задаём ширину линии*/
+  background-color: #0F205C;
+  /*задаём цвет линии*/
+  content: "";
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+header .navigation .nav-a-li:hover:after,
+header .navigation .nav-a-li:focus:after {
+  width: 100%;
+}
+header .contact-us {
+  border: 2px solid #fff;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  padding: 10px 40px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  margin-right: 5%;
+}
+header .contact-us:hover {
+  background: #0F205C;
+  border: 2px solid transparent;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.main-text {
+  position: absolute;
+  z-index: 5;
+  color: #fff;
+  margin: 15% 3%;
+}
+.main-text h1 {
+  font-family: "Montserrat";
+  font-weight: bold;
+  line-height: 60px;
+}
+.main-text .order {
+  color: #fff;
+  padding: 12px 28px;
+  background: #0F205C;
+  border: 2px solid #0F205C;
+  border-radius: 10px;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  font-weight: bold;
+}
+.main-text .order:hover {
+  background: transparent;
+  color: #0F205C;
+  font-weight: bold;
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  border: 2px solid #0F205C;
+}
+
+.first-screen {
+  background: -webkit-gradient(linear, left top, left bottom, from(#000A2E), color-stop(24.08%, rgba(0, 10, 46, 0.17)), color-stop(54.34%, rgba(0, 10, 46, 0.07)), to(rgba(0, 10, 46, 0)));
+  background: linear-gradient(180deg, #000A2E 0%, rgba(0, 10, 46, 0.17) 24.08%, rgba(0, 10, 46, 0.07) 54.34%, rgba(0, 10, 46, 0) 100%);
+}
+
+#carouselExampleIndicators {
+  z-index: -1;
+  position: relative;
+}
+
+.carousel-indicators {
+  left: auto !important;
+  margin-right: 10% !important;
+  margin-bottom: 10% !important;
+}
+.carousel-indicators [data-bs-target] {
+  width: 42px !important;
+  margin-right: 40px !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("/img/rigth-icon.svg") !important;
+}
+
+.second-screen .the-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2em 1em;
+}
+.second-screen .the-cards .card {
+  width: 550px;
+  margin: 2%;
+}
+.second-screen .the-cards .card img {
+  height: 100%;
+}
+.second-screen .the-cards .card .card-body {
+  height: 50%;
+  background-color: #DADADA;
+}
+.second-screen .the-cards .card .card-body .card-title {
+  font-family: Gabriela;
+}
+.second-screen .the-cards .card .card-body .card-text {
+  padding: 0 4% 30px;
+}
+
+.fourth-screen {
+  padding: 2em 1em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.fourth-screen .paragraphe-photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.fourth-screen .paragraphe-photo .photo {
+  width: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.fourth-screen .paragraphe-photo .photo img {
+  width: 100%;
+}
+.fourth-screen .paragraphe-photo .right-paragraphe, .fourth-screen .paragraphe-photo .left-paragraphe {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 1rem 1rem;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fifth-screen {
+  padding: 2em 1em;
+}
+.fifth-screen .swiper {
+  height: auto;
+}
+.fifth-screen .swiper .first-two-words {
+  margin-bottom: 2em;
+}
+.fifth-screen .swiper .first-two-words h3 {
+  font-weight: bold;
+}
+.fifth-screen .swiper .swiper-wrapper {
+  height: 200px;
+}
+.fifth-screen .swiper .swiper-wrapper .swiper-slide {
+  padding: 3em;
+}
+.fifth-screen .swiper .swiper-wrapper .swiper-slide .name {
+  text-align: center;
+}
+.fifth-screen .swiper .swiper-wrapper .swiper-slide .name h4 {
+  font-weight: 700;
+}
+.fifth-screen .swiper .swiper-wrapper .swiper-slide .customer-revie {
+  padding: 0 3%;
+}
+.fifth-screen .swiper .swiper-button-next, .fifth-screen .swiper .swiper-button-prev {
+  margin-top: 0;
+  color: black !important;
+}

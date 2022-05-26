@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gabriela&family=Montserrat:wght@400;800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: "Montserrat";
+}
+
+:root {
+   --swiper-navigation-size: 100px!important;
+}
+
+body {
+   background: #F7F8FF;
+}
+
+a, li {
+   text-decoration: none!important;
+}
+
+.preloader {
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 99999;
+   background: #111934;
+   transition: 1s all;
+   opacity: 1;
+   visibility: visible;
+
+   .loader {
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+   }
+
+   &.done {
+      opacity: 0;
+      visibility: hidden;
+   }
+}
+
+header {
+   font-weight: 800;
+   font-size: 18px;
+   position: absolute;
+   width: 100%;
+   padding-left: 3%;
+   padding-top: 2%;
+   z-index: 100;
+   .navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .nav-li {
+         margin-right: 4rem;
+      }
+      .nav-a-li {
+         color: #fff !important;
+      }
+      .nav-a-li:after {
+         display: block;
+         left: 0;
+         /*изменить на right:0;, чтобы изменить направление подчёркивания */
+         width: 0;
+         /*задаём длинну линии до наведения курсора*/
+         height: 2px;
+         /*задаём ширину линии*/
+         background-color: #0F205C;
+         /*задаём цвет линии*/
+         content: "";
+         transition: width 0.3s ease-out;
+      }
+      .nav-a-li:hover:after,
+      .nav-a-li:focus:after {
+         width: 100%;
+       }
+      } 
+   .contact-us {
+      border: 2px solid #fff;
+      filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+      border-radius: 10px;
+      background: transparent;
+      color: #fff;
+      padding: 10px 40px;
+      transition: all .8s;
+      margin-right: 5%;
+   }
+   .contact-us:hover {
+      background: #0F205C;
+      border: 2px solid transparent;
+      transition: all .8s;
+   }
+}
+
+.main-text {
+   position: absolute;
+   z-index: 5;
+   color: #fff;
+   margin: 15% 3%;
+   h1 {
+      font-family: "Montserrat";
+      font-weight: bold;
+      line-height: 60px;
+   }
+   .order {
+       color: #fff;
+       padding: 12px 28px;
+       background: #0F205C;
+       border: 2px solid #0F205C;
+       border-radius: 10px;
+       transition: all .8s;
+       font-weight: bold;
+   }
+   .order:hover {
+      background: transparent;
+      color: #0F205C;
+      font-weight: bold;
+      transition: all .8s;
+      border: 2px solid #0F205C;
+   }
+}
+
+.first-screen {
+   background: linear-gradient(180deg, #000A2E 0%, rgba(0, 10, 46, 0.17) 24.08%, rgba(0, 10, 46, 0.07) 54.34%, rgba(0, 10, 46, 0) 100%);
+}
+
+#carouselExampleIndicators {
+   z-index: -1;
+   position: relative;
+}
+
+.carousel-indicators {
+   left: auto !important;
+   margin-right: 10% !important;
+   margin-bottom: 10% !important;
+   [data-bs-target] {
+      width: 42px !important;
+      margin-right: 40px !important;
+   }
+}
+
+.carousel-control-next-icon {
+   background-image: url('/img/rigth-icon.svg')!important;
+}
+
+
+.second-screen {
+   .the-cards {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      padding: 2em 1em;
+      .card {
+         width: 550px;
+         margin: 2%;
+         img {
+            height: 100%;
+         }
+         .card-body {
+            height: 50%;
+            background-color: #DADADA;
+            .card-title {
+               font-family: Gabriela;
+            }            
+            .card-text {
+               padding: 0 4% 30px;
+            }
+         }
+      }
+   }
+}
+
+.fourth-screen {
+   padding: 2em 1em;
+   justify-content: center;
+   .paragraphe-photo {
+      display: flex;
+      margin-bottom: 1%;
+      box-sizing: border-box;
+      align-items: center;
+      .photo {
+         width: 50%;
+         box-sizing: border-box;
+         img {
+         width: 100%;
+      }
+
+      }
+      .right-paragraphe, .left-paragraphe {
+         box-sizing: border-box;
+         padding: 0  1rem 1rem;
+         width: 50%;
+         justify-content: center;
+      }
+   }
+}
+
+
+.fifth-screen {
+   padding: 2em 1em;
+   .swiper {
+      height: auto;
+      .first-two-words {
+         margin-bottom: 2em;
+         h3 {
+            font-weight: bold;
+         }
+      }
+      .swiper-wrapper {
+         height: 200px;
+         .swiper-slide{
+            padding: 3em;
+            .name {
+            text-align: center;
+            h4 {
+               font-weight: 700;
+            }
+         }
+         .customer-revie {
+            padding: 0 3%;
+         }
+         }
+      }
+      .swiper-button-next, .swiper-button-prev {
+         margin-top: 0;
+         color: black!important;
+      }
+    }
+    
+}
